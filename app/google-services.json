@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1044306183712",
+    "firebase_url": "https://carsstore-1c8c5.firebaseio.com",
+    "project_id": "carsstore-1c8c5",
+    "storage_bucket": "carsstore-1c8c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044306183712:android:5a8086f126f1736d",
+        "android_client_info": {
+          "package_name": "com.esprit.souhaibbenfarhat.carsstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044306183712-nlgosvbcqijlnp1os6h5bqdaijm57929.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.esprit.souhaibbenfarhat.carsstore",
+            "certificate_hash": "E9B28ACB2856CAC6BA7F79FED611888D26FD2E13"
+          }
+        },
+        {
+          "client_id": "1044306183712-0r31df0esm9m1hfvl3erlquvllpgj8sd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdT8pzH7_NJvAg0260gINOm813WPM_nlY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044306183712-0r31df0esm9m1hfvl3erlquvllpgj8sd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

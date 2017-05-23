@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="BrandName">
+        <item>@string/Brand1</item>
+        <item>@string/Brand2</item>
+        <item>@string/Brand3</item>
+        <item>@string/Brand4</item>
+        <item>@string/Brand1</item>
+        <item>@string/Brand2</item>
+        <item>@string/Brand3</item>
+        <item>@string/Brand4</item>
+        <item>@string/Brand1</item>
+        <item>@string/Brand2</item>
+        <item>@string/Brand3</item>
+        <item>@string/Brand4</item>
+    </string-array>
+
+    <string-array name="transmition">
+        <item>@string/transmition1</item>
+        <item>@string/transmition2</item>.
+        <item>@string/transmition3</item>
+    </string-array>
+
+    <string-array name="condition">
+        <item>@string/condition1</item>
+        <item>@string/condition2</item>
+    </string-array>
+
+    <string-array name="nbPortes">
+        <item>@string/nbPorte2</item>
+        <item>@string/nbPorte3</item>
+        <item>@string/nbPorte4</item>
+        <item>@string/nbPorte5</item>
+        <item>@string/nbPorteA</item>
+    </string-array>
+    <string-array name="carburant">
+        <item>@string/carburant1</item>
+        <item>@string/carburant2</item>
+        <item>@string/carburant3</item>
+        <item>@string/carburant4</item>
+        <item>@string/carburant5</item>
+    </string-array>
+
+</resources>

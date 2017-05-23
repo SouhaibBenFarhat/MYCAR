@@ -1,0 +1,319 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.main_acitivity.fragments.NewCarsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:elevation="5dp"
+                    android:src="@drawable/find_the_right_car_2" />
+
+            </android.support.v7.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/layout_shadow"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TROUVEZ LA MEILLEUR"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <AutoCompleteTextView
+
+                    android:id="@+id/autoCompleteTextView"
+                    style="@style/myEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="  Type to select car name, e.g. Audi A3"
+                    android:inputType="text"
+                    android:textAlignment="center" />
+
+                <android.support.v7.widget.AppCompatButton
+
+                    android:id="@+id/btn_search"
+                    android:layout_width="280dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/my_button"
+                    android:gravity="center_horizontal|top"
+                    android:padding="12dp"
+                    android:text="CHERCHER"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/layout_shadow"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LES PLUS RECENTS"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_featured_cars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <!--<EditText-->
+
+                <!--style="@style/myEditTextStyle"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="40dp"-->
+                <!--android:hint="  Type to select car name, e.g. Audi A3"-->
+                <!--android:inputType="text"-->
+                <!--android:textAlignment="center" />-->
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_featured_cars_see_all"
+                    android:layout_width="200dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/my_button"
+                    android:gravity="center_horizontal|top"
+                    android:padding="12dp"
+                    android:text="VOIR PLUS"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/layout_shadow"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOUVEAUTÉ"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_news_magazine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_see_all_news"
+                    android:layout_width="200dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/my_button"
+                    android:gravity="center_horizontal|top"
+                    android:padding="12dp"
+                    android:text="VOIR PLUS"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/layout_shadow"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LES PLUS CONNUES"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_popular_brands"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <EditText
+                    android:id="@+id/et_search_brands"
+                    style="@style/myEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:hint="  Type to select car name, e.g. Audi A3"
+                    android:inputType="text"
+                    android:textAlignment="center" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/layout_shadow"
+                android:elevation="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONCESSIONNAIRE"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_concessionnaire"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_concessionnaire_see_all"
+                    android:layout_width="200dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/my_button"
+                    android:gravity="center_horizontal|top"
+                    android:padding="12dp"
+                    android:text="VOIR PLUS"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:elevation="4dp"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="20dp">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:text="New Cars"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="35sp" />-->
+
+            <!--<EditText-->
+
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:background="@drawable/tv_background"-->
+            <!--android:hint="  Type to select car name, e.g. Audi A3"-->
+            <!--android:inputType="text"-->
+            <!--android:shadowColor="@android:color/white"-->
+            <!--android:textAlignment="center" />-->
+
+            <!--<android.support.v7.widget.AppCompatButton-->
+
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="38dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginBottom="4dp"-->
+            <!--android:layout_marginLeft="0dp"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:background="@drawable/my_button"-->
+            <!--android:gravity="center_horizontal|top"-->
+            <!--android:padding="12dp"-->
+            <!--android:text="FIND CAR"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="12sp" />-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

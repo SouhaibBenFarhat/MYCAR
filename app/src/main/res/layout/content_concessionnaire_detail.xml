@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.concessionnaure_detail_activity.ConcessionnaireDetailActivity"
+    tools:showIn="@layout/activity_concessionnaire_detail">
+
+
+    <com.esprit.nolife.carsstore.custom_implementation.LockableScrollView
+        android:id="@+id/main_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:id="@+id/main_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/colorAccent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:maxLines="3"
+                        android:padding="8dp"
+                        android:text="Description "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="0dp"
+                        android:background="#777" />
+
+                    <TextView
+                        android:id="@+id/concessionnaire_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="3"
+                        android:padding="8dp"
+                        android:text="A body in high-strength steel, fenders and doors in aluminum, a carbon fiber hood, roof and driveshaft, available front seat frames and aerodynamic appendices work in conjunction with the patented all-aluminum suspension to create a near perfect balance. "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="#444"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:maxLines="3"
+                        android:padding="8dp"
+                        android:text="Detail"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="0dp"
+                        android:background="#777" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_marker" />
+
+                                <TextView
+                                    android:id="@+id/concessionnaire_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:maxLines="3"
+                                    android:padding="8dp"
+                                    android:text=""
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                                    android:textColor="#444"
+                                    android:textSize="10sp"
+                                    android:textStyle="normal" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_phone" />
+
+                                <TextView
+                                    android:id="@+id/concessionnaire_phone_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:maxLines="3"
+                                    android:padding="8dp"
+                                    android:text=""
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                                    android:textColor="#444"
+                                    android:textSize="10sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_fax" />
+
+                                <TextView
+                                    android:id="@+id/concessionnaire_fax_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:maxLines="3"
+                                    android:padding="8dp"
+                                    android:text=""
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                                    android:textColor="#444"
+                                    android:textSize="10sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/ic_navigation" />
+
+                                <TextView
+                                    android:id="@+id/concessionnaire_web_page"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:maxLines="3"
+                                    android:padding="8dp"
+                                    android:text=""
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                                    android:textColor="#444"
+                                    android:textSize="10sp"
+                                    android:textStyle="normal" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="#99000000"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <android.support.v7.widget.AppCompatButton
+                                android:id="@+id/btn_call"
+                                android:layout_width="0dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="14dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1"
+                                android:alpha="1"
+                                android:background="@drawable/button_call"
+                                android:gravity="center_horizontal|top"
+                                android:padding="5dp"
+                                android:text="Call"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="10sp" />
+
+
+                            <android.support.v7.widget.AppCompatButton
+                                android:id="@+id/btn_web_site"
+                                android:layout_width="0dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="14dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1"
+                                android:alpha="1"
+                                android:background="@drawable/my_button"
+                                android:gravity="center_horizontal|top"
+                                android:padding="5dp"
+                                android:text="Web Site"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </com.esprit.nolife.carsstore.custom_implementation.LockableScrollView>
+</RelativeLayout>

@@ -1,0 +1,231 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.esprit.nolife.carsstore.activities.sell_car_activity.sell_car_fragments.SecondStepSellCarFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <TextView
+                android:id="@+id/secondFragmentTitre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:text="VEUILLEZ CHARGER 4 PHOTOS"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secondFragmentTitre"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            cardview:cardCornerRadius="2dp"
+                            cardview:cardElevation="3dp"
+                            cardview:cardUseCompatPadding="true">
+
+                            <ImageView
+                                android:id="@+id/iv_face"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/vue_de_face" />
+                        </android.support.v7.widget.CardView>
+
+                        <Button
+
+                            android:id="@+id/btn_ajout_face"
+                            android:layout_width="150dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="1dp"
+                            android:background="@drawable/my_button"
+                            android:gravity="center_horizontal|top"
+                            android:padding="8dp"
+                            android:text="Ajouter une photo"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            cardview:cardCornerRadius="2dp"
+                            cardview:cardElevation="3dp"
+                            cardview:cardUseCompatPadding="true">
+
+                            <ImageView
+                                android:id="@+id/iv_arrier"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/vue_arriere" />
+                        </android.support.v7.widget.CardView>
+
+                        <Button
+
+                            android:id="@+id/btn_ajout_arriere"
+                            android:layout_width="150dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="1dp"
+                            android:background="@drawable/my_button"
+                            android:gravity="center_horizontal|top"
+                            android:padding="8dp"
+                            android:text="Ajouter une photo"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            cardview:cardCornerRadius="2dp"
+                            cardview:cardElevation="3dp"
+                            cardview:cardUseCompatPadding="true">
+
+                            <ImageView
+                                android:id="@+id/iv_cote"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/vue_de_cotee" />
+                        </android.support.v7.widget.CardView>
+
+                        <Button
+
+                            android:id="@+id/btn_ajout_cote"
+                            android:layout_width="150dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="1dp"
+                            android:background="@drawable/my_button"
+                            android:gravity="center_horizontal|top"
+                            android:padding="8dp"
+                            android:text="Ajouter une photo"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:cardview="http://schemas.android.com/apk/res-auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            cardview:cardCornerRadius="2dp"
+                            cardview:cardElevation="3dp"
+                            cardview:cardUseCompatPadding="true">
+
+                            <ImageView
+                                android:id="@+id/iv_interieur"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:src="@drawable/vue_interieuree" />
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.AppCompatButton
+
+                            android:id="@+id/btn_ajout_interieur"
+                            android:layout_width="150dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="1dp"
+                            android:background="@drawable/my_button"
+                            android:gravity="center_horizontal|top"
+                            android:padding="8dp"
+                            android:text="Ajouter une photo"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatButton
+
+                    android:id="@+id/btn_nextStep2"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/my_button"
+                    android:gravity="center_horizontal|top"
+                    android:padding="12dp"
+                    android:text="Suivant"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</FrameLayout>
