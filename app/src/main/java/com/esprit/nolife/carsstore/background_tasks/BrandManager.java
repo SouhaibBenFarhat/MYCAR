@@ -43,12 +43,12 @@ public class BrandManager {
     public final ArrayList<Brand> brands = new ArrayList<>();
 
     GridView gridView;
-    Spinner spinnerBrand,spinnerModel;
+    Spinner spinnerBrand, spinnerModel;
     ProgressDialog progressDialog;
     long selected;
     RecyclerView popularBrands;
 
-    public BrandManager(Context context , Spinner spinnerBrand , Spinner spinnerModel,long selected) {
+    public BrandManager(Context context, Spinner spinnerBrand, Spinner spinnerModel, long selected) {
         this.context = context;
         this.spinnerBrand = spinnerBrand;
         this.spinnerModel = spinnerModel;
@@ -57,7 +57,8 @@ public class BrandManager {
         progressDialog.setTitle("Chargement");
         progressDialog.setMessage("Récupération des données du serveur");
     }
-    public BrandManager(Context context , Spinner spinnerBrand , Spinner spinnerModel) {
+
+    public BrandManager(Context context, Spinner spinnerBrand, Spinner spinnerModel) {
         this.context = context;
         this.spinnerBrand = spinnerBrand;
         this.spinnerModel = spinnerModel;
@@ -75,6 +76,7 @@ public class BrandManager {
         progressDialog.setMessage("Récupération des données du serveur");
 
     }
+
     public BrandManager(Context context, RecyclerView popularBrands) {
         this.context = context;
         this.popularBrands = popularBrands;
@@ -95,7 +97,7 @@ public class BrandManager {
 
     public void getBrand() {
 
-     //   progressDialog.show();
+        //   progressDialog.show();
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, URL.GET_BRANDS, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -104,28 +106,28 @@ public class BrandManager {
                 while (count < response.length()) {
                     try {
                         Brand brand = new Brand();
-        JSONObject jsonObject = response.getJSONObject(count);
-        brand.setBrandId(jsonObject.getString("id"));
-        brand.setBrand(jsonObject.getString("name"));
-        brand.setLogo(jsonObject.getString("logo"));
-        brand.setCover(jsonObject.getString("cover"));
-        brands.add(brand);
-        count++;
-    } catch (JSONException e) {
-        e.printStackTrace();
-    }
-}
-    BrandGridAdapter brandGridAdapter = new BrandGridAdapter(context, R.layout.brand_item, brands);
-gridView.setAdapter(brandGridAdapter);
-        gridView.setNumColumns(3);
-        progressDialog.dismiss();
+                        JSONObject jsonObject = response.getJSONObject(count);
+                        brand.setBrandId(jsonObject.getString("id"));
+                        brand.setBrand(jsonObject.getString("name"));
+                        brand.setLogo(jsonObject.getString("logo"));
+                        brand.setCover(jsonObject.getString("cover"));
+                        brands.add(brand);
+                        count++;
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                BrandGridAdapter brandGridAdapter = new BrandGridAdapter(context, R.layout.brand_item, brands);
+                gridView.setAdapter(brandGridAdapter);
+                gridView.setNumColumns(3);
+                progressDialog.dismiss();
 
-        }
+            }
         }, new Response.ErrorListener() {
-@Override
-public void onErrorResponse(VolleyError error) {
-        Toast.makeText(context, "Probléme de connexion", Toast.LENGTH_SHORT).show();
-        }
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(context, "Probléme de connexion", Toast.LENGTH_SHORT).show();
+            }
         }
 
         );
@@ -156,31 +158,28 @@ public void onErrorResponse(VolleyError error) {
                     }
                 }
 
-                List<String> spinnerArray =  new ArrayList<String>();
-                for ( int i=0 ; i< brands.size() ; i++ )
-                {
+                List<String> spinnerArray = new ArrayList<String>();
+                for (int i = 0; i < brands.size(); i++) {
                     spinnerArray.add(brands.get(i).brand);
 
                 }
 
 
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(context,android.R.layout.simple_spinner_item , spinnerArray);
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(context, android.R.layout.simple_spinner_item, spinnerArray);
 
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
                 spinnerBrand.setAdapter(adapter);
-               int x= (int) selected;
-               int y = Integer.parseInt(brands.get(x).brandId);
-                ModelsManager modelsManager = new ModelsManager(spinnerModel,context,y);
+                int x = (int) selected;
+                int y = Integer.parseInt(brands.get(x).brandId);
+                ModelsManager modelsManager = new ModelsManager(spinnerModel, context, y);
                 modelsManager.getModelsBrand(y);
-
-
 
 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context,"Probléme de connexion", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Probléme de connexion", Toast.LENGTH_SHORT).show();
             }
         }
 
@@ -188,6 +187,7 @@ public void onErrorResponse(VolleyError error) {
         ConnectionSingleton.getInstance(context).addToRequestque(jsonArrayRequest);
 
     }
+
     public void getBrandNameModel() {
 
         //   progressDialog.show();
@@ -212,12 +212,10 @@ public void onErrorResponse(VolleyError error) {
                 }
 
 
-                int x= (int) selected;
+                int x = (int) selected;
                 int y = Integer.parseInt(brands.get(x).brandId);
-                ModelsManager modelsManager = new ModelsManager(spinnerModel,context,y);
+                ModelsManager modelsManager = new ModelsManager(spinnerModel, context, y);
                 modelsManager.getModelsBrand(y);
-
-
 
 
             }
@@ -236,7 +234,6 @@ public void onErrorResponse(VolleyError error) {
     public void getBrandLogo(int brandId, final ImageView img) {
 
         String request = URL.GET_BRAND_LOGO + "?brand_id=" + String.valueOf(brandId);
-
 
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, request, null, new Response.Listener<JSONArray>() {
@@ -263,14 +260,13 @@ public void onErrorResponse(VolleyError error) {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context,"Probléme de connexion", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Probléme de connexion", Toast.LENGTH_SHORT).show();
             }
         }
 
         );
         ConnectionSingleton.getInstance(context).addToRequestque(jsonArrayRequest);
     }
-
 
 
     public void getPopularBrands() {
@@ -298,8 +294,10 @@ public void onErrorResponse(VolleyError error) {
                 LinearLayoutManager featuredCarslayoutManager
                         = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
                 popularBrands.setLayoutManager(featuredCarslayoutManager);
+                brands.remove(1);
                 PopularBrandsRecyclerViewAdapter popularBrandsRecyclerViewAdapter = new PopularBrandsRecyclerViewAdapter(context, brands);
                 popularBrands.setAdapter(popularBrandsRecyclerViewAdapter);
+                popularBrands.setHasFixedSize(true);
                 progressDialog.dismiss();
 
             }
@@ -314,7 +312,6 @@ public void onErrorResponse(VolleyError error) {
         ConnectionSingleton.getInstance(context).addToRequestque(jsonArrayRequest);
 
     }
-
 
 
     public void searchPopularBrand(final String brandName) {
@@ -333,7 +330,7 @@ public void onErrorResponse(VolleyError error) {
                         brand.setBrand(jsonObject.getString("name"));
                         brand.setLogo(jsonObject.getString("logo"));
                         brand.setCover(jsonObject.getString("cover"));
-                        if (brand.getBrand().toLowerCase().contains(brandName.toLowerCase())){
+                        if (brand.getBrand().toLowerCase().contains(brandName.toLowerCase())) {
                             brands.add(brand);
                         }
                         count++;

@@ -26,6 +26,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.URL.URL;
 import com.esprit.nolife.carsstore.activities.main_acitivity.fragments.ModelDetailFragment;
@@ -85,7 +86,7 @@ public class ModelRecyclarViewAdapter extends RecyclerView.Adapter<ModelRecyclar
         customViewHolder.tvModelDescription.setText(models.get(i).getDescription()+"...");
         customViewHolder.modelPrice.setText(models.get(i).getPriceFrom());
         customViewHolder.tvModelDescription.setText(models.get(i).getDescription());
-        Picasso.with(mContext).load(Uri.parse(models.get(i).getPicture().getUrl())).resize(600, 350)
+        Glide.with(mContext).load(Uri.parse(models.get(i).getPicture().getUrl())).override(600, 350)
                 .into(customViewHolder.imageModel);
         customViewHolder.userRatingValue.setText("--");
         customViewHolder.modelName.setOnClickListener(new View.OnClickListener() {

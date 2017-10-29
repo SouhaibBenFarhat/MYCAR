@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.activities.models_activity.ModelsActivity;
 import com.esprit.nolife.carsstore.entities.Brand;
@@ -48,7 +49,7 @@ public class BrandGridAdapter extends ArrayAdapter<Brand> {
         TextView tvBrandTitle = (TextView) view.findViewById(R.id.brand_title);
         ImageView imgBrandLogo = (ImageView) view.findViewById(R.id.img_brand_logo);
         tvBrandTitle.setText(brands.get(position).getBrand());
-        Picasso.with(view.getContext()).load(Uri.parse(brands.get(position).getLogo()))
+        Glide.with(view.getContext()).load(Uri.parse(brands.get(position).getLogo()))
                 .into(imgBrandLogo);
         view.setOnClickListener(new View.OnClickListener() {
             @Override

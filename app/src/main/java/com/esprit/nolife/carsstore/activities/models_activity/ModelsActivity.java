@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.background_tasks.ModelsManager;
 import com.esprit.nolife.carsstore.entities.Brand;
@@ -49,7 +50,7 @@ public class ModelsActivity extends AppCompatActivity {
             brand = (Brand) b.getSerializable("brand");
             System.out.println(brand.getCover() + "cover");
             toolbar.setTitle(brand.getBrand());
-            Picasso.with(getApplicationContext()).load(Uri.parse(brand.getCover())).into(brandCover);
+            Glide.with(getApplicationContext()).load(Uri.parse(brand.getCover())).into(brandCover);
             modelsRecyclerView = (RecyclerView) findViewById(R.id.rv_models);
             modeLinearLayoutManager = new GridLayoutManager(this, 2);
             modelsRecyclerView.setLayoutManager(modeLinearLayoutManager);

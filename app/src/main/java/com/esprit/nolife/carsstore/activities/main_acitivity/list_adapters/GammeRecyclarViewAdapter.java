@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.activities.main_acitivity.fragments.FavorisFragment;
 import com.esprit.nolife.carsstore.activities.main_acitivity.fragments.GammeDetailFragment;
@@ -58,7 +59,7 @@ public class GammeRecyclarViewAdapter extends RecyclerView.Adapter<GammeRecyclar
     public void onBindViewHolder(final GammeRecyclarViewAdapter.CustomViewHolder customViewHolder, final int i) {
         customViewHolder.gammeName.setText(gammes.get(i).getGamme());
         customViewHolder.gammePrice.setText(gammes.get(i).getPrix());
-        Picasso.with(mContext).load(Uri.parse(gammes.get(i).getPictureUrl()))
+        Glide.with(mContext).load(Uri.parse(gammes.get(i).getPictureUrl()))
                 .into(customViewHolder.imageGamme);
         customViewHolder.menuModel.setOnClickListener(new View.OnClickListener() {
             @Override

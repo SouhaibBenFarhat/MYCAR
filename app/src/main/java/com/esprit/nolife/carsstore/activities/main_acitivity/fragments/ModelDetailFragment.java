@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.activities.album_photo.ModelPhotoGalleryActivity;
 import com.esprit.nolife.carsstore.background_tasks.BrandManager;
@@ -92,7 +93,7 @@ public class ModelDetailFragment extends Fragment {
         brandManager.getBrandLogo(Integer.parseInt(model.getBrandId()), imgGammeBrandLogo);
 
 
-        Picasso.with(getContext()).load(Uri.parse(model.getPicture().getUrl())).into(imgModel);
+        Glide.with(getContext()).load(Uri.parse(model.getPicture().getUrl())).into(imgModel);
         rvGammes = (RecyclerView) getActivity().findViewById(R.id.rv_gammes);
         linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         rvGammes.setLayoutManager(linearLayoutManager);

@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.activities.main_acitivity.fragments.FilterFragment;
 import com.esprit.nolife.carsstore.entities.Brand;
@@ -79,7 +80,7 @@ public class BrandFilterListViewAdapter extends ArrayAdapter<Brand> {
         });
 
         brandName.setText(brand.getBrand());
-        Picasso.with(context).load(Uri.parse(brand.getLogo())).into(brandLogo);
+        Glide.with(context).load(Uri.parse(brand.getLogo())).into(brandLogo);
 
         Activity activity = (Activity) context;
         final ScrollView scrollView = (ScrollView) activity.findViewById(R.id.filter_scroll);

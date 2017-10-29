@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.activities.featured_car_activity.FeatuderCarDetailActivity;
 import com.esprit.nolife.carsstore.entities.FeaturedCar;
@@ -58,7 +59,7 @@ public class FeaturedCarsRecyclerAdapter extends RecyclerView.Adapter<FeaturedCa
         //Setting text view title
         customViewHolder.tvTitle.setText(featuredCar.getTitle());
         customViewHolder.tvDescription.setText(featuredCar.getDescription());
-        Picasso.with(mContext).load(Uri.parse(featuredCar.getThumbnailUrl())).into(customViewHolder.imageView);
+        Glide.with(mContext).load(Uri.parse(featuredCar.getThumbnailUrl())).into(customViewHolder.imageView);
     }
 
     @Override

@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.activities.main_acitivity.fragments.NewsMagazineFragment;
 import com.esprit.nolife.carsstore.activities.news_detail_activity.NewsDetailActivity;
@@ -53,7 +54,7 @@ public class NewsMagazineRecyclerAdapter extends RecyclerView.Adapter<NewsMagazi
         customViewHolder.textView.setText(carMagazine.getTitle());
         customViewHolder.txtNewsAuthor.setText(carMagazine.getAuthor());
         customViewHolder.txtNewsPubDate.setText(carMagazine.getPubDate());
-        Picasso.with(mContext).load(Uri.parse(carMagazine.getThumbnailUrl())).into(customViewHolder.imageView);
+        Glide.with(mContext).load(Uri.parse(carMagazine.getThumbnailUrl())).into(customViewHolder.imageView);
         customViewHolder.tvNewsDescription.setText(carMagazine.getDescription().replaceAll("\\<[^>]*>", ""));
         customViewHolder.tvSeeMore.
                 setPaintFlags(customViewHolder.tvSeeMore.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);

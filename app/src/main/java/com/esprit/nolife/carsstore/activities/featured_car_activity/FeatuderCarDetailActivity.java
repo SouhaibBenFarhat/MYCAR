@@ -12,6 +12,7 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.activities.main_acitivity.MainActivity;
 import com.esprit.nolife.carsstore.entities.FeaturedCar;
@@ -73,7 +74,7 @@ public class FeatuderCarDetailActivity extends AppCompatActivity {
         featuredCarTitle.setText(featuredCar.getTitle().trim());
         featuredCarDatePub.setText(featuredCar.getPubDate().substring(0, 16));
         featuredCarDescription.setText(featuredCar.getDescription());
-        Picasso.with(getApplicationContext()).load(Uri.parse(featuredCar.getThumbnailUrl())).into(featuredCarImage);
+        Glide.with(getApplicationContext()).load(Uri.parse(featuredCar.getThumbnailUrl())).into(featuredCarImage);
         MainActivity.etSearchFeaturedCars.setVisibility(View.INVISIBLE);
 
         WebView carDetail = (WebView) findViewById(R.id.car_spec);

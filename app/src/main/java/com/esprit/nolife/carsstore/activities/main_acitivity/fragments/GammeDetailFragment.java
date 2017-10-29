@@ -30,6 +30,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.bumptech.glide.Glide;
 import com.esprit.nolife.carsstore.R;
 import com.esprit.nolife.carsstore.URL.URL;
 import com.esprit.nolife.carsstore.activities.album_photo.PhotoGalleryActivity;
@@ -105,7 +106,7 @@ public class GammeDetailFragment extends Fragment {
         gammeName = (TextView) getActivity().findViewById(R.id.gamme_name);
         gammeImg = (ImageView) getActivity().findViewById(R.id.gamme_img);
         gammeBrandLogoImage = (ImageView) getActivity().findViewById(R.id.img_gamme_detail_brand_logo);
-        Picasso.with(getContext()).load(Uri.parse(gamme.getPictureUrl())).into(gammeImg);
+        Glide.with(getContext()).load(Uri.parse(gamme.getPictureUrl())).into(gammeImg);
         gammeName.setText(gamme.getGamme());
         gammeDescription.setText(gamme.getDescription());
         gammePrix.setText(gamme.getPrix());
